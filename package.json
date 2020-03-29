@@ -10,7 +10,7 @@
     "test": "exit 0",
     "build": "ls && npm run build:dir && npm run build:prod",
     "build:dir": "rimraf ./build && mkdir build",
-    "build:prod": "webpack --config webpack.config.babel.js --colors"
+    "build:prod": "./node_modules/.bin/webpack --config webpack.config.babel.js --colors"
   },
   "files": [
     "build",
