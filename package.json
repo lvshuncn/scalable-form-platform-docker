@@ -1,0 +1,63 @@
+{
+  "name": "scalable-form-platform-docker",
+  "version": "1.0.5",
+  "description": "standalone scalable-form server",
+  "main": "index.js",
+  "scripts": {
+    "start": "./src/docker.js -c ./etc/config.json",
+    "dev": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'npm run dev:build && node ./build/index.js'",
+    "dev:build": "cross-env NODE_ENV=development webpack --config webpack.config.babel.js --colors",
+    "test": "exit 0",
+    "build": "npm run build:dir && npm run build:prod",
+    "build:dir": "rimraf ./build && mkdir build",
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.babel.js --colors"
+  },
+  "files": [
+    "build",
+    "src"
+  ],
+  "bin": {
+    "scalable-form": "./src/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvshuncn/scalable-form-platform-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lvshuncn/scalable-form-platform-cli/issues"
+  },
+  "homepage": "https://github.com/lvshuncn/scalable-form-platform-cli#readme",
+  "dependencies": {
+    "rimraf": "^3.0.0",
+    "@babel/runtime": "^7.7.2",
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
+    "cross-env": "^6.0.3",
+    "koa": "^2.11.0",
+    "pm2": "^4.1.2",
+    "scalable-form-server": "^0.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@babel/preset-typescript": "^7.6.0",
+    "@babel/register": "^7.4.0",
+    "@types/expect": "^1.20.4",
+    "@types/jest": "^24.0.11",
+    "babel-loader": "^8.0.6",
+    "jest": "^24.7.1",
+    "jest-simple-summary": "^1.0.1",
+    "nodemon": "^1.19.4",
+    "ts-jest": "^24.0.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
+  }
+}

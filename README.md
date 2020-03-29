@@ -1,1 +1,2 @@
-# scalable-form-platform-docker
+# scalable-form-platform-cli
+standalone scalable-form server
