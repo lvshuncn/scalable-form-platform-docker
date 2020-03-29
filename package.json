@@ -8,7 +8,7 @@
     "dev": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'npm run dev:build && node ./build/index.js'",
     "dev:build": "cross-env NODE_ENV=development webpack --config webpack.config.babel.js --colors",
     "test": "exit 0",
-    "build": "npm run build:dir && npm run build:prod",
+    "build": "ls && npm run build:dir && npm run build:prod",
     "build:dir": "rimraf ./build && mkdir build",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.babel.js --colors"
   },
