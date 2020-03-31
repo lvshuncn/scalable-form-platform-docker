@@ -1,7 +1,7 @@
 # scalable-form-platform-docker
 A standalone Scalable Form server
 
-![GitHub](https://img.shields.io/github/license/lvshuncn/scalable-form-platform-docker?style=flat)
+![GitHub](https://img.shields.io/github/license/alibaba/scalable-form-platform?style=flat)
 ![GitHub last commit](https://img.shields.io/github/last-commit/lvshuncn/scalable-form-platform-docker?style=flat)
 ![GitHub issues](https://img.shields.io/github/issues/lvshuncn/scalable-form-platform-docker)
 
